@@ -1,0 +1,22 @@
+# Example config for tmux_launcher
+session: example
+root_dir: ../            # base directory (relative to this YAML file)
+help_window: true
+
+# Default env exported in every pane (and usable for ${VAR} expansion)
+env:
+  ROS_MASTER_URI: "http://127.0.0.1:11311"
+  ROS_IP: "127.0.0.1"
+
+tmux:
+  mouse: "on"
+  history-limit: "10000"
+
+windows:
+  ex1:
+    - -print=ex1
+    - cat ./config/ex_config.yaml
+  ex2:
+    - -print=ex2
+    - -sleep=10
+    - dmesg -w
