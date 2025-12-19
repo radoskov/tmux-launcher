@@ -1,0 +1,19 @@
+[project]
+name = "tmux-launcher"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "radoskov",email = "radoslav.skoviera@cvut.cz"},
+]
+dependencies = ["libtmux>=0.53.0"]
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "LGPLv2"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
